@@ -1,0 +1,104 @@
+Bloque 1 - Pilas (Fifo)
+--Historial de navegación--
+x cada link que se ingresa se registra/apila y al retroceder se desapila
+    ejemplo: apila --> fi.uba.ar --> campus.utn.edu.ar --> www.stackoverflow.com
+
+--Editor de código--
+Al tener variables una en la que este el estado base/inicial, otra que sea el cambio
+mas reciente y la ultima siendo la sumatoria entre las otras dos.
+En caso de necesitar volver atras se podría volver al estado incial.
+
+y se podria poner un tope de cambios para determinar que la variable que contenga la sumatoria de las otras dos,
+pise a la variable de estado inicial.
+
+--Reversión de Strings--
+Tendrias que iterar la palabra apilando letra por letra, y al desapilar te quedaría SOMTIROGLA.
+
+--Navegación de Directorios--
+Se deberia apilar pathAnterior y pathActual asi en caso de querer volver atras desapilas el pathActual por ende
+subiendo un nivel.
+
+Ejemplo: se apila [C:/] --> se vuelve a apilar [C:/Usuarios], resultando en [[C:/],[C:/Usuarios]] y en caso de
+desapilar resultaría en [[C:/]]
+
+--Pila de llamadas--
+En este caso la funcion Sumar() estaria en el Tope(), el orden iría [Main(), CalcularPromedio(), Suma()]
+
+Bloque 2 - Colas y Colas con prioridad
+--Fila del cajero--
+Es una cola común, no se describe ninguna medida implementada para justificar el que tenga prioridades
+
+--Impresora de laboratorio--
+El orden de salida sería por el orden de llegada de la impresora, a esto me refiero a que depende de que archivo reciba
+primero la impresora.
+Cola común
+
+--Guardia del hospital de clínicas--
+llega un señor con un preinfarto(Prioridad 90), también a su vez llega un adulto con una fractura(Priorida 60) y
+por ultimo otro adulto pero con un esguince(prioridad 15).
+
+--Examen final--
+En este caso el promocionado(Prioridad 10) al tener una mayor prioridad que el regular(prioridad 5), el que tendría que
+desacolar primero sería el promocionado.
+
+--Buffet de la facultad--
+Usaría la funcion Primero(), que se describe en las operaciones de colas, esto para saber a quien le toca y que
+nadie se cuele.
+
+--Procesador de tareas--
+En caso de tener una sobrecarga se deberían cerrar(desacolar), los procesos con menor prioridad.
+
+--Embarque de aerolíneas--
+Al tener dos personas con igualdad de prioridad se atiende por orden de llegada.
+
+--Distribución de tickets--
+
+Bloque 3 - Conjuntos
+--Padrón electoral--
+Se podria evitar el que se vote 2 veces, Agregar() cada alumno que voto y para confirmar que voto podrias usar
+Pertenece() para confirmar que este en el conjunto. También se evitaria que volviera a votar debido a que al sumarlo de
+nuevo en un hipotetico caso no se podria volver a Agregar().
+
+--Invitados a la fiesta de fin de cursada--
+Si la lista es un conjunto no se puede Agregar() a alguién que ya esta en el conjunto, no, no cambia el conjunto.
+
+--Filtro de spam(Blacklist)--
+Tendrías que tener previamente un conjunto armado con las palabras "Crypto", "Ganá", "Premio", posterior a eso deberías
+extraer el contenido del del mail, y usar Pertenece().
+
+--Tags de un blog de ingeniería--
+Se usa un conjunto en los tags para evitar la redundancia de los mismos.
+
+--Gestión de legajos--
+Te podrías asegurar si guardaras los legajos en conjuntos asi evitando la repeticion de la ID
+
+--Operación Elegir vs Sacar--
+Hay posibilidades de que obtengas el mismo elemento, asi como de no y que sea diferente.
+
+Bloque 4 - Diccionarios simples y múltiples
+Modelado:  Clave: / Valor:
+
+--Puntaje de torneo de E-Sports--
+Modelado:  Clave:[Usuario] / Valor:[PuntajeMaximo]
+
+--Traductor de idiomas--
+TDA Sugerido: Múltiple
+
+--Índice de un libro de algoritmos--
+Modelado:  Clave:["Recursión"] / Valor:[12,45,88]
+
+--Inscripcion por alumnos--
+Modelado:  Clave:[1190067] / Valor:[Algebra, ProgramacionII, SistInformaticosII, Quimica]
+
+--DNS--
+Modelado:  Clave:[google.com] / Valor:[142.250.190.46.]
+
+--Chipotle--
+Modelado:  Clave:[13] / Valor:[python.exe venv -m venv]
+
+Bloque 5 - Mix de modelado y estrategias de implementación
+
+1. El hospital premium
+
+
+Hacer un ejercicio de pila estatica como dinámica
