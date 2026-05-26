@@ -1,0 +1,33 @@
+EJERCICIO 3: Comparación de Implementaciones (TDA Cola)
+Basándote en las tablas de costos de la cátedra, compará la operación Acolar(x) en:
+1.ColaPU (Estática): Donde el nuevo elemento va siempre a la posición 0 del arreglo.
+2.ColaLD (Dinámica): Donde se utiliza un puntero al último nodo. Pregunta: ¿Cuál es el costo de cada una
+y por qué la implementación estática suele ser más "pesada" en este caso?
+
+EJERCICIO 4: Complejidad de método
+Consigna: Determiná la familia de complejidad temporal del siguiente método en el peor caso. Justificá tu respuesta aplicando las reglas de suma y simplificación vistas en la cátedra.
+public static void procesoMezclado(int[] datos) {
+    int n = datos.length;
+
+    // Bloque A
+    for (int i = 0; i < n; i++) {   // N_1
+        System.out.println(datos[i]); // C1: Constante
+    }
+
+    // Bloque B
+    for (int i = 0; i < n; i++) {   //N_2 peor caso!
+        for (int j = 0; j < n; j++) {   //N_3
+            datos[i] = datos[i] + datos[j]; // C2: Constante
+        }
+    }
+}
+
+EJERCICIO 5: Cola con prioridad
+Consigna: Analizá la operación Desacolar() en una Cola con Prioridad implementada con K subcolas circulares
+(donde K es la cantidad de prioridades y n es la cantidad total de elementos).
+Determiná su complejidad y justificá por qué no depende de n.
+
+EJERCICIO 6: Conjuntos
+Consigna: Se desea calcular la intersección de dos Conjuntos (A y B) de tamaño n cada uno, utilizando la implementación estática de la cátedra (arreglos sin duplicados).
+El algoritmo recorre todos los elementos de A y, por cada uno, verifica si Pertenece a B.
+Si está, lo agrega a un tercer conjunto "Resultado". Determiná la complejidad temporal total justificando el costo de cada operación interna.
