@@ -1,0 +1,88 @@
+1.
+N1 * (C1+C2) * (C3 * N2 *(C4)) = se anula K1, C3, C4
+0(N_1 * N2) =
+0(N_1*N_2) = 0(n^2)
+Corregido
+1.
+public static int buscarYValidar(int[] array) {
+for(int i = 0; i < array.length; i++) { //N_1 peor caso!
+    if(array[i] == 5) {//C1
+    return i;//C2
+    } else {
+        for(int j = 0; j < i; j++) {//N_2
+            if(array[j] == 6) return i;//C4
+        }
+    }
+    }
+    return -1; *se anula
+    }
+--------------------------------------------------------1
+2.El costo es constante de las tres... ?
+buscar
+--------------------------------------------------------2
+3.0(N_1+C1) = 0(n)
+
+Buscar este punto!
+
+Espacial: Evalúa cuánta memoria (RAM) requiere el programa.
+Temporal: Evalúa cuánto tiempo tarda el programa en ejecutarse
+--------------------------------------------------------3
+4.C1
+N1
+N2
+0(C1+N1+N2) =
+0((N1)+(N2))
+0(N1*N2)
+costo total : N+N = 2N -> se cancela la multiplicación
+0(n)
+Corregido
+public static void procesoMisterioso(int[] arreglo) {
+int n = arreglo.length;//C1
+System.out.println("Inicio");----- ¡No toman esto como una constante! -----
+for (int i = 0; i < n; i++) { arreglo[i] *= 2; } //N1 ¡el contenido de los for tampoco los toman como constantes!
+for (int j = 0; j < n; j++) { System.out.println(arreglo[j]); }//N2
+}
+
+for secuenciales se suman
+--------------------------------------------------------4
+0(N1*N2(C1+C2))=
+0(N1*N2*K1)=
+0(N^2*K1)=
+----regla de la dominancia----
+0(n^2)
+--------------------------------------------------------5
+6.
+  public static void procesoMezclado(int[] datos) {
+  int n = datos.length; //C
+  // Bloque A: Bucle simple
+  for (int i = 0; i < n; i++) { System.out.println(datos[i]); } //N_1
+  // Bloque B: Bucles anidados
+  for (int i = 0; i < n; i++) { //N_2
+    for (int j = 0; j < n; j++) { datos[i] += datos[j]; } //N_3
+  }
+}
+0(C+N_1+(N_2*N_3)) =
+0(C+N_1+N^2) =
+---regla de la dominancia---
+0(n^2)
+--------------------------------------------------------6
+7.???
+--------------------------------------------------------7
+8.0(N_1+C1+C2)
+----regla de la dominancia----
+0(n)
+--------------------------------------------------------8
+9.En las colas con prioridad se dice que la complejidad es independiente a la cantidad de los elementos,
+debido a que esta vinculado a la prioridad que tienen esas colas. Su complejidad es 0(K) porque la operacion desacolar
+en una cola con prioridad es constante.
+--------------------------------------------------------9
+10.public static int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+Pertenece a la familia de los Exponenciales y el crecimiento es exponencial.
+Buscar crecimiento arbolado
+---Termino---
+
+Practicar la 7, la 9, la 10, la 3 y la 2.
