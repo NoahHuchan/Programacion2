@@ -1,0 +1,40 @@
+12/05
+Arboles --> Tipo de grafo por ende también es un TDA
+    -Se componen por una raíz, nodos internos, relaciones y hojas externas.
+        -Raíz: Único nodo sin padre
+        -Nodos internos: nodos con al menos un hijo
+        -Hojas/nodos externos : nodos sin descendencia
+        -Relaciones: Ancestros(hacia la raiz) y descendientes (hacia las hojas)
+
+    -Se caracterizan por tener:
+        -Profundidad distancia desde la raiz al nodo
+        -Altura: Máxima profundidad del arbol, se cuenta en aristas
+
+        -Aristas = nodos - 1
+
+    +Tipos:
+        -Árbol General
+        -Árbol Binario:
+            - 2 Nodos hijos por padre = cepo de grado maximo 2
+        -Árbol B
+
+    +Orden: I (Izquierda) - R (Raíz) - D(Derecha)
+        -Pre-orden (R-I-D)
+        -In-orden (I-R-D)
+        -Post-orden (I-D-R)
+    +Recorrido de Euler
+    ???
+
+    +Factor de Balance --> bf = Altura(subÁrbolDerecho) - Altura(subÁrbolDerecho) // solo esta equilibrio en
+     caso de bf perteneciente a {-1, 0, 1}.
+
+        -En caso de no presentar equilibrio, se realizan rotaciones:
+            -RSI: Rotacion Simple Izquierda
+            -RSD: Rotacion simple Derecha
+            -RDI: Rotacion doble Izquierda-Derecha
+            -RDD: Rotacion doble Derecha-Izquierda
+
+            -Las rotaciones dobles se componen por 2 pasos, primero rotar al hijo para enderesar y luego como 2da parte rotar al padre,
+            para balancear
+
+
