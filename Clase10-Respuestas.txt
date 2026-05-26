@@ -1,0 +1,37 @@
+Ejercicio 01
+
+C1+C2 = C6
+N_1*(C3) // 0(n)
+N_2*(C4+C5) // 0(n)
+
+Ejercicio 02
+
+O(n^2)
+
+Ejercicio03
+
+Cola Dinamica es mas costosa debido a que recorre cada nodo buscando el
+final, a diferencia de la estatica que ya se conoce el final. Buscar porque es mas pesada
+
+Ejercicio 04
+Bloque A
+
+1.N_2*[N_3*(C2)]
+2.O(N_1*C1 + N_2*N_3*C2)
+--regla de la suma con N_2*N_3 y C2 se anula--
+3.0(N_2*N_3) // 0(n^2) cuadratica''
+revisar este, esta mal
+
+Ejercicio 05
+En la operacion desacolar en una cola con prioridad
+se depende de K siendo la prioridad debido a que se elimina el elemento
+con mayor prioridad en la cola
+
+
+Ejercicio 06 - se podría justificar así? al final si se puede
+N_1{El algoritmo recorre todos los elementos de A y}, por cada uno, C1{verifica si Pertenece a B}.
+C2{Si está, lo agrega a un tercer conjunto "Resultado"}
+
+N_1*(C1+C2) = O(n)
+
+El condicional es inecesario en mi opinion en los conjuntos no se pueden dar duplicados
